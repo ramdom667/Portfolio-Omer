@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developed by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>Project Template</title>
+
+  <link href="./main.3f6952e4.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Accueil</a></li>
+          <li><a href="./works.html" title="">02 : Ethan</a></li>
+          <li><a href="./contact.html" title="">03 : Trains</a></li>
+          <li><a href="./components.html" title="">04 : CTFd</a></li>
+          <li><a href="./about.html" title="">05 : About me</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center section-container-spacer">
+        <h1 class="h2">La légende d’Éthane</h1>
+        <p>Un premier jeu vidéo crée avec passion</p>
+      </div>
+
+      <div class="col-sm-6">
+        <h3>Introduction</h3>
+        <p>
+          Créer un jeu vidéo de A à Z en un temps limité est une expérience exigeante mais incroyablement gratifiante. Participer à une Code Game Jam, c’est tout un challenge, mais aussi un sacré moment de fun ! Avec mon équipe, on a décidé de se lancer dans la création d’un jeu, sans avoir jamais touché à Unity ou C# avant. Autant dire qu’on partait un peu de zéro, mais on s’est rapidement pris au jeu (sans mauvais jeu de mots).
+        </p>
+        <p>
+          On a tout fait nous-mêmes : les sprites dessinés à la main, le design des niveaux, la musique… et même l’histoire et le lore du jeu. Chaque détail a été pensé pour donner vie à un univers qui nous ressemble. C’était intense, mais hyper gratifiant de voir toutes nos idées prendre forme.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="./assets/images/ethanpres.png" alt="Project Screenshot" class="img-responsive">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>détails technique</h3>
+        <p>
+          Le jeu qu’on a créé, La légende d’Éthane, suit les aventures d’un ado de 15 ans, Ethane, qui a un QI si bas qu’il ferait passer une huître pour un génie. Il vit dans un village où personne ne l’aime, et lorsqu’une tornade menace de détruire tout le monde, les habitants le poussent à partir en mission pour les sauver… tout en espérant secrètement qu’il échoue. Mais au lieu de se concentrer sur la tempête, Ethane se lance dans une quête pour… attraper un chat trop kawaii. Ce chat lui fait traverser des niveaux, où il débloque des pouvoirs divins en cassant tout ce qui se trouve sur son chemin. Le jeu est un mélange de comédie absurde et d’aventure chaotique, avec un lore complètement déjanté sur sa lignée divine.
+        </p>
+        <p>
+          Ce projet, c’était un vrai mélange de découvertes, de fous rires et de belles surprises. Au final, on a non seulement appris à coder un jeu, mais on a surtout passé un super moment en équipe à créer quelque chose de vraiment unique.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <video controls class="img-responsive">
+          <source src="./assets/videos/La%20Légende%20d'Ethane%20：%20le%20trailer.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="dynamic-text-box" style="position: fixed; bottom: 10px; right: 10px; background-color: #333; color: #fff; padding: 15px; border-radius: 5px; max-width: 300px; font-size: 14px;">
+  <p id="dynamic-text"></p>
+</div>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p></a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const texts = [
+      "Dans un petit village tranquille, Ethane vivait avec son grand-père adoptif.",
+      "Rejeté par les villageois, il rêvait de devenir un héros.",
+      "Un jour, une énorme tornade approcha, offrant une chance à Ethane de prouver sa valeur.",
+      "Lors de sa quête, il rencontra un chat mystérieux et obtint des pouvoirs inattendus.",
+      "Ce chat révéla qu'Ethane était le dernier descendant d'une lignée divine.",
+      "Transformé par cette révélation, Ethane sauva le village, mais comprit enfin qu'il n'était pas accepté.",
+      "Un choix s'offrit à lui : pardonner ou se venger."
+    ];
+
+    let index = 0;
+    const textElement = document.getElementById("dynamic-text");
+
+    function showNextText() {
+      textElement.textContent = texts[index];
+      index = (index + 1) % texts.length;
+      setTimeout(showNextText, 4000);
+    }
+
+    showNextText();
+  });
+</script>
+
+
+<script type="text/javascript" src="./main.70a66962.js"></script>
+</body>
+
+</html>
