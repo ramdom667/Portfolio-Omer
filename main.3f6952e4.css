@@ -84,16 +84,15 @@ td,th
 /*# sourceMappingURL=main.70a66962.map*/
 /* Image au-dessus de l'encadrement */
 .profile-image {
-    display: block; /* S'assure que l'image occupe une ligne seule */
-    margin: 80px auto 20px auto; /* Augmente l'espacement au-dessus pour la déplacer plus bas */
-    width: 350px; /* Largeur de l'image (ajustable selon la taille désirée) */
-    height: 250px; /* Hauteur de l'image (ajustable selon la taille désirée) */
-    border-radius: 15px; /* Coins arrondis */
-    opacity: 0.75; /* Légère transparence */
-    object-fit: cover; /* Empêche l'image d'être étirée en préservant ses proportions */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre esthétique */
-    margin-top: 450px; /* Espacement beaucoup plus grand entre l'image et le haut de la page */
-    margin-top: 450px; /* Espacement beaucoup plus grand entre l'image et le haut de la page */
+    display: block;
+    margin: 80px auto 20px auto; /* marge classique */
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    opacity: 0.75;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* margin-top: 450px;  <-- retirer */
 }
 
 /* Conteneur de la vidéo en arrière-plan */
@@ -120,17 +119,17 @@ td,th
 
 /* Encadrement noir semi-transparent */
 .text-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
-    padding: 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
-    text-align: left; /* Alignement à gauche pour l'encadrement */
-    width: 50%; /* Largeur du bloc */
-    position: absolute; /* Positionnement absolu pour centrer */
-    top: 50%; /* Centre verticalement */
-    left: 50%; /* Centre horizontalement */
-    transform: translate(-50%, -50%); /* Ajuste le positionnement pour centrer parfaitement */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Ombre esthétique */
-    margin-top: 120px; /* Espacement pour que l'encadrement soit bien en dessous de l'image */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 50%;
+    position: absolute;
+    top: 70%; /* au lieu de 50% pour descendre le bloc texte */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    /* margin-top: 120px; <-- tu peux supprimer */
 }
 
 /* Alignement du texte */
