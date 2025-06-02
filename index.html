@@ -2,60 +2,43 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="google" content="notranslate">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Accueil</title>
-
-    <!-- Polices et icônes -->
+    <title>Omer Tilki</title>
+    <link rel="stylesheet" href="./CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Feuille de style -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
 
-<!-- Conteneur principal avec vidéo de fond -->
 <div class="video-background-container">
-
-    <!-- Vidéo d'arrière-plan -->
-    <video autoplay loop muted playsinline class="video-background">
-        <source src="image/video2.mp4" type="video/mp4">
+    <video class="video-background" autoplay muted loop>
+        <source src="./assets/videos/background.mp4" type="video/mp4">
     </video>
 
-    <!-- Encadré semi-transparent contenant le texte -->
     <div class="text-overlay">
         <div class="hero-full-wrapper">
-            <img src="image/profil2.jpg" alt="Photo de profil d’Omer Tilki" class="profile-image">
-
             <div class="text-content">
-                <h1>
-                    Bonjour,<br>
-                    <span id="typed-strings">
-                            <span>Je m'appelle Omer Tilki</span>
-                            <span>Développeur informatique</span>
-                            <span>Actuellement étudiant</span>
-                        </span>
-                    <span id="typed"></span>
-                </h1>
+                <h1>Bonjour, je suis Omer Tilki</h1>
+                <span id="typed"></span>
             </div>
+            <img src="./assets/images/profil2.jpg" class="profile-image" alt="Image de profil">
         </div>
     </div>
 </div>
 
+<!-- Script typed.js si tu utilisais du texte animé -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        new Typed("#typed", {
-            stringsElement: "#typed-strings",
-            typeSpeed: 50,
-            backSpeed: 25,
-            backDelay: 2000,
-            loop: true
-        });
+    const typed = new Typed("#typed", {
+        strings: [
+            "Étudiant en BUT Informatique",
+            "Passionné par les bases de données",
+            "Développeur backend Java / SQL"
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
     });
 </script>
+
 </body>
 </html>
