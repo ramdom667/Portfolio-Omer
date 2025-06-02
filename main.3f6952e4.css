@@ -92,7 +92,7 @@ td,th
     opacity: 0.75;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* margin-top: 450px;  <-- retirer */
+
 }
 
 /* Conteneur de la vidéo en arrière-plan */
@@ -125,7 +125,7 @@ td,th
     text-align: left;
     width: 50%;
     position: absolute;
-    top: 70%; /* au lieu de 50% pour descendre le bloc texte */
+    top: 60%; /* au lieu de 50% pour descendre le bloc texte */
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
