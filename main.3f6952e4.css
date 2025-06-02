@@ -91,6 +91,7 @@ td,th
 
 .text-content {
     max-width: 500px;
+    width: 500px;
 }
 
 .profile-image {
