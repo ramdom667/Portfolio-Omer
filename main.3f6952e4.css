@@ -80,20 +80,24 @@ table
 td,th
 {padding:0}
 
-.content-wrapper {
-    text-align: center;
-    padding-top: 50px;
+.hero-full-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petits écrans */
+    gap: 30px; /* Espace entre les deux blocs */
+    padding: 20px;
+}
+
+.text-content {
+    max-width: 500px;
 }
 
 .profile-image {
-    display: block;
-    margin: 0 auto;
-    width: 350px;
-    height: 250px;
-    border-radius: 15px;
-    opacity: 0.75;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
 /* Conteneur de la vidéo en arrière-plan */
