@@ -1,97 +1,35 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
-article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary
-{display:block}
-audio,canvas,progress,video
-{display:inline-block;vertical-align:baseline}
-audio:not([controls])
-{display:none;height:0}
-[hidden],template
-{display:none}
-a
-{background-color:transparent}
-a:active,a:hover
-{outline:0}
-abbr[title]
-{border-bottom:1px dotted}
-b,strong
-{font-weight:700}
-dfn
-{font-style:italic}
-h1
-{font-size:2em;margin:.67em 0}
-mark
-{background:#ff0;color:#000}
-small
-{font-size:80%}
-sub,sup
-{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sup
-{top:-.5em}
-sub
-{bottom:-.25em}
-img
-{border:0}
-svg:not(:root)
-{overflow:hidden}
-figure
-{margin:1em 40px}
-hr
-{box-sizing:content-box;height:0}
-pre
-{overflow:auto}
-code,kbd,pre,samp
-{font-family:monospace,monospace;font-size:1em}
-button,input,optgroup,select,textarea
-{color:inherit;font:inherit;margin:0}
-button
-{overflow:visible}
-button,select
-{text-transform:none}
-button,html input[type=button],input[type=reset],input[type=submit]
-{-webkit-appearance:button;cursor:pointer}
-button[disabled],html input[disabled]
-{cursor:default}
-button::-moz-focus-inner,input::-moz-focus-inner
-{border:0;padding:0}
-input
-{line-height:normal}
-input[type=checkbox],input[type=radio]
-{box-sizing:border-box;padding:0}
-input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button
-{height:auto}
-input[type=search]
-{-webkit-appearance:textfield;box-sizing:content-box}
-input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration
-{-webkit-appearance:none}
-fieldset
-{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
-textarea
-{overflow:auto}
-optgroup
-{font-weight:700}
-table
-{border-collapse:collapse;border-spacing:0}
-td,th
-{padding:0}
+@import url('https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+/* Reset de base (normalize.css allégé) */
+html {
+    font-family: 'Roboto', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* Mise en page principale */
 .hero-full-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Permet de passer à la ligne sur petits écrans */
-    gap: 30px; /* Espace entre les deux blocs */
+    flex-wrap: wrap;
+    gap: 30px;
     padding: 20px;
 }
 
 .text-content {
     max-width: 500px;
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
 }
 
 .profile-image {
@@ -101,15 +39,14 @@ td,th
     border: 2px solid white;
 }
 
-/* Conteneur de la vidéo en arrière-plan */
+/* Vidéo en fond */
 .video-background-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Hauteur de la fenêtre */
+    height: 100vh;
     overflow: hidden;
 }
 
-/* Vidéo en arrière-plan */
 .video-background {
     position: absolute;
     top: 50%;
@@ -119,42 +56,33 @@ td,th
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1; /* Derrière le contenu */
-    object-fit: cover; /* La vidéo couvre tout sans déformation */
+    z-index: -1;
+    object-fit: cover;
 }
 
-/* Encadrement noir semi-transparent */
+/* Bloc semi-transparent autour du texte */
 .text-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
-    padding: 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
-    text-align: left; /* Alignement à gauche pour l'encadrement */
-    width: 50%; /* Largeur du bloc */
-    position: absolute; /* Positionnement absolu pour centrer */
-    top: 50%; /* Centre verticalement */
-    left: 50%; /* Centre horizontalement */
-    transform: translate(-50%, -50%); /* Ajuste le positionnement pour centrer parfaitement */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Ombre esthétique */
-    margin-top: 120px; /* Espacement pour que l'encadrement soit bien en dessous de l'image */
-}
-
-/* Alignement du texte */
-.text-content {
-    display: flex;
-    flex-direction: column; /* Alignement vertical */
-    justify-content: center; /* Centre verticalement le conteneur de texte */
-    align-items: flex-start; /* Texte aligné à gauche */
-    height: 100%; /* S'assure que le texte occupe tout l'espace */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 120px;
 }
 
 .text-content h1 {
-    font-size: 2.5rem; /* Taille du texte */
-    color: #fff; /* Couleur blanche */
-    margin: 0; /* Supprime l'espace par défaut */
-    line-height: 1.5; /* Espacement des lignes */
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.5;
 }
 
 .text-content span#typed {
-    display: inline-block; /* S'assure que le texte généré occupe une ligne propre */
-    color: #fff; /* Couleur blanche */
+    display: inline-block;
+    color: #fff;
 }
