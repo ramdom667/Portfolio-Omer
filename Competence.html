@@ -2,11 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
     <title>Portfolio - Compétences</title>
-    <link href="./main.3f6952e4.css" rel="stylesheet">
+    <link href="./main.3f6952e4.css" rel="stylesheet" />
+    <style>
+        /* Ajouts CSS pour boutons et explications */
+        .project-btn {
+            border: none;
+            background: #007bff;
+            color: white;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-left: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .project-btn:hover {
+            background-color: #0056b3;
+        }
+        .project-exp {
+            margin-top: 4px;
+            margin-left: 25px;
+            font-style: italic;
+            color: #555;
+            max-width: 700px;
+            display: none;
+            user-select: text;
+        }
+    </style>
 </head>
 
 <body class="minimal">
@@ -18,7 +45,8 @@
 <header>
     <nav class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -45,36 +73,140 @@
     <section>
         <h2>Compétence 2 – Optimiser des applications</h2>
         <ul>
-            <li><strong>AC1 : Anticiper les résultats de diverses métriques</strong> – Projets : <em>La légende d’Éthane</em> (partiel), <em>Trains</em></li>
-            <li><strong>AC2 : Profiler, analyser et justifier le comportement d’un code existant</strong> – Projet : <em>La légende d’Éthane</em> (non validé)</li>
-            <li><strong>AC3 : Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d’application</strong> – Projet : <em>La légende d’Éthane</em></li>
-            <li><strong>AC4 : Comprendre les enjeux et moyens de sécurisation des données et du code</strong> – Projets : <em>Trains</em> (partiel), <em>CTF Yggame</em></li>
+            <li>
+                <strong>AC1 : Anticiper les résultats de diverses métriques</strong> – Projets :
+                <button class="project-btn" data-target="exp-ac2-ac1-ethane">La légende d’Éthane</button>,
+                <button class="project-btn" data-target="exp-ac2-ac1-trains">Trains</button>
+                <div id="exp-ac2-ac1-ethane" class="project-exp">
+                    Explication : ce projet permet d’anticiper des métriques liées aux performances partielles.
+                </div>
+                <div id="exp-ac2-ac1-trains" class="project-exp">
+                    Explication : ce projet permet d’anticiper des métriques liées à l’optimisation des trajets.
+                </div>
+            </li>
+            <li>
+                <strong>AC2 : Profiler, analyser et justifier le comportement d’un code existant</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac2-ac2-ethane">La légende d’Éthane</button> (non validé)
+                <div id="exp-ac2-ac2-ethane" class="project-exp">
+                    Ce projet a été partiellement validé pour cette compétence.
+                </div>
+            </li>
+            <li>
+                <strong>AC3 : Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d’application</strong> –
+                Projet : <button class="project-btn" data-target="exp-ac2-ac3-ethane">La légende d’Éthane</button>
+                <div id="exp-ac2-ac3-ethane" class="project-exp">
+                    Le projet intègre des bibliothèques spécifiques adaptées au jeu.
+                </div>
+            </li>
+            <li>
+                <strong>AC4 : Comprendre les enjeux et moyens de sécurisation des données et du code</strong> – Projets :
+                <button class="project-btn" data-target="exp-ac2-ac4-trains">Trains</button> (partiel),
+                <button class="project-btn" data-target="exp-ac2-ac4-ctf">CTF Yggame</button>
+                <div id="exp-ac2-ac4-trains" class="project-exp">
+                    Utilisation de sécurités basiques dans l’application Trains.
+                </div>
+                <div id="exp-ac2-ac4-ctf" class="project-exp">
+                    Sécurisation avancée des données et codes dans la plateforme CTF.
+                </div>
+            </li>
         </ul>
     </section>
 
     <section>
         <h2>Compétence 3 – Administration systèmes informatiques communicants</h2>
         <ul>
-            <li><strong>AC1 : Créer des processus de traitement automatisé</strong> – Projet : <em>CTF Yggame</em></li>
-            <li><strong>AC2 : Configurer un serveur et des services réseaux de manière avancée</strong> – Projet : <em>CTF Yggame</em></li>
-            <li><strong>AC3 : Appliquer une politique de sécurité au niveau de l’infrastructure</strong> – Projet : <em>CTF Yggame</em></li>
-            <li><strong>AC4 : Déployer et maintenir un réseau d’organisation</strong> – Projet : <em>CTF Yggame</em></li>
+            <li>
+                <strong>AC1 : Créer des processus de traitement automatisé</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac3-ac1-ctf">CTF Yggame</button>
+                <div id="exp-ac3-ac1-ctf" class="project-exp">
+                    Automatisation des processus dans la plateforme CTF.
+                </div>
+            </li>
+            <li>
+                <strong>AC2 : Configurer un serveur et des services réseaux de manière avancée</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac3-ac2-ctf">CTF Yggame</button>
+                <div id="exp-ac3-ac2-ctf" class="project-exp">
+                    Configuration avancée des serveurs et services dans CTF.
+                </div>
+            </li>
+            <li>
+                <strong>AC3 : Appliquer une politique de sécurité au niveau de l’infrastructure</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac3-ac3-ctf">CTF Yggame</button>
+                <div id="exp-ac3-ac3-ctf" class="project-exp">
+                    Mise en place de politiques de sécurité dans l’infrastructure CTF.
+                </div>
+            </li>
+            <li>
+                <strong>AC4 : Déployer et maintenir un réseau d’organisation</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac3-ac4-ctf">CTF Yggame</button>
+                <div id="exp-ac3-ac4-ctf" class="project-exp">
+                    Gestion complète du réseau organisationnel pour le CTF.
+                </div>
+            </li>
         </ul>
     </section>
 
     <section>
         <h2>Compétence 4 – Gérer des données de l'information</h2>
         <ul>
-            <li><strong>AC1 : Optimiser les modèles de données</strong> – Projet : <em>CTF Yggame</em> (partiel)</li>
-            <li><strong>AC2 : Assurer la confidentialité des données</strong> – Projet : <em>CTF Yggame</em></li>
-            <li><strong>AC3 : Organiser la restitution de données</strong> – Projets : <em>La légende d’Éthane</em>, <em>Trains</em></li>
-            <li><strong>AC4 : Manipuler des données hétérogènes</strong> – Projets : <em>La légende d’Éthane</em>, <em>CTF Yggame</em></li>
+            <li>
+                <strong>AC1 : Optimiser les modèles de données</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac4-ac1-ctf">CTF Yggame</button> (partiel)
+                <div id="exp-ac4-ac1-ctf" class="project-exp">
+                    Optimisation des modèles et schémas de données dans le CTF.
+                </div>
+            </li>
+            <li>
+                <strong>AC2 : Assurer la confidentialité des données</strong> – Projet :
+                <button class="project-btn" data-target="exp-ac4-ac2-ctf">CTF Yggame</button>
+                <div id="exp-ac4-ac2-ctf" class="project-exp">
+                    Mesures prises pour garantir la confidentialité des données.
+                </div>
+            </li>
+            <li>
+                <strong>AC3 : Organiser la restitution de données</strong> – Projets :
+                <button class="project-btn" data-target="exp-ac4-ac3-ethane">La légende d’Éthane</button>,
+                <button class="project-btn" data-target="exp-ac4-ac3-trains">Trains</button>
+                <div id="exp-ac4-ac3-ethane" class="project-exp">
+                    Organisation des données de restitution dans le projet Éthane.
+                </div>
+                <div id="exp-ac4-ac3-trains" class="project-exp">
+                    Organisation et restitution de données dans le projet Trains.
+                </div>
+            </li>
+            <li>
+                <strong>AC4 : Manipuler des données hétérogènes</strong> – Projets :
+                <button class="project-btn" data-target="exp-ac4-ac4-ethane">La légende d’Éthane</button>,
+                <button class="project-btn" data-target="exp-ac4-ac4-ctf">CTF Yggame</button>
+                <div id="exp-ac4-ac4-ethane" class="project-exp">
+                    Manipulation et gestion de données hétérogènes dans Éthane.
+                </div>
+                <div id="exp-ac4-ac4-ctf" class="project-exp">
+                    Gestion des données variées dans la plateforme CTF.
+                </div>
+            </li>
         </ul>
     </section>
 
 </main>
 
-<script type="text/javascript" src="./main.70a66962.js"></script>
-</body>
+<script>
+    // Script JS pour toggle affichage des explications
+    document.querySelectorAll('.project-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const expDiv = document.getElementById(targetId);
 
+            if (!expDiv) return;
+
+            // Toggle affichage : si visible, on cache, sinon on montre
+            if (expDiv.style.display === 'block') {
+                expDiv.style.display = 'none';
+            } else {
+                expDiv.style.display = 'block';
+            }
+        });
+    });
+</script>
+</body>
 </html>
